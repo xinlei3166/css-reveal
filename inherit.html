@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tooltip-inherit</title>
+  <style>
+    .tooltip {
+      margin: 100px auto;
+      display: block;
+      background: aliceblue;
+      border: 1px solid dodgerblue;
+      position: relative;
+      width: 200px;
+      height: 100px;
+      padding: .35em;
+    }
+    .tooltip::before {
+      content: ' ';
+      position: absolute;
+      top: -.4em;
+      left: 50%;
+      padding: .35em;
+      background: inherit;
+      border-width: 1px;
+      border-style: solid;
+      border-color: inherit;
+      border-right: 0;
+      border-bottom: 0;
+      transform: translateX(-50%) rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <span class="tooltip">
+    人生若只如初见，何事秋风悲画扇。
+  </span>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>背景定位</title>
+  <style>
+    .box {
+      margin: 100px auto;
+      box-sizing: border-box;
+      padding: 10px;
+      width: 200px;
+      height: 200px;
+      background: paleturquoise url('../img/vue.png') no-repeat bottom right;
+      background-size: 80px;
+      background-origin: content-box;
+    }
+
+    .box2 {
+      background: paleturquoise url('../img/vue.png') no-repeat calc(100% - 40px) calc(100% - 20px);
+      background-origin: unset;
+      background-size: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    人生若只如初见，何事秋风悲画扇。
+  </div>
+  <div class="box box2">
+    人生若只如初见，何事秋风悲画扇。
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>复杂的背景图案</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(palevioletred, cornsilk);
+    }
+
+    .wg1 {
+      background: white;
+      background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 0), linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 0);
+      background-size: 30px 30px;
+    }
+
+    .wg2 {
+      background: #58a;
+      background-image: linear-gradient(white 1px, transparent 0), linear-gradient(90deg, white 1px, transparent 0);
+      background-size: 30px 30px;
+    }
+
+    .bd1 {
+      background: #655;
+      background-image: radial-gradient(tan 30%, transparent 0);
+      background-size: 30px 30px;
+    }
+
+    .bd2 {
+      background: #655;
+      background-image: radial-gradient(tan 30%, transparent 0), radial-gradient(tan 30%, transparent 0);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+
+    .qp {
+      background: #eee;
+      background-image: linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0), linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 0, transparent 75%, rgba(0, 0, 0, .25) 0);
+      background-size: 30px 30px;
+      background-position: 0 0, 15px 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box wg1"></div>
+  <div class="box wg2"></div>
+  <div class="box bd1"></div>
+  <div class="box bd2"></div>
+  <div class="box qp"></div>
+</body>
+</html>
