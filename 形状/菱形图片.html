@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>菱形图片</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin: 100px;
+      width: 200px;
+      height: 200px;
+      background: aliceblue;
+      transform: rotate(45deg);
+      overflow: hidden;
+    }
+
+    .picture .img {
+      max-width: 100%;
+      transform: rotate(-45deg) scale(1.42);
+    }
+
+    .img-clip {
+      width: 200px;
+      height: 200px;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      transition: clip-path 1s;
+    }
+
+    .img-clip:hover {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="box picture">
+    <img class="img" src="../img/cat.jpg"/>
+  </div>
+  <img class="img-clip" src="../img/cat.jpg"/>
+</body>
+</html>

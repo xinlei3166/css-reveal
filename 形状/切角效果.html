@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>切角效果</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 200px;
+      background: aliceblue;
+    }
+
+    .corner1 {
+      background: linear-gradient(-45deg, transparent 15px, aliceblue 0);
+    }
+
+    .corner2 {
+      background:
+        linear-gradient(45deg, transparent 15px, pink 0) left,
+        linear-gradient(-45deg, transparent 15px, aliceblue 0) right;
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+    }
+
+    .corner4 {
+      background:
+        linear-gradient(135deg, transparent 15px, aliceblue 0) top left,
+        linear-gradient(-135deg, transparent 15px, aliceblue 0) top right,
+        linear-gradient(-45deg, transparent 15px, aliceblue 0) bottom right,
+        linear-gradient(45deg, transparent 15px, aliceblue 0) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    .arc-corner4 {
+      background:
+        radial-gradient(circle at top left, transparent 15px, aliceblue 0) top left,
+        radial-gradient(circle at top right, transparent 15px, aliceblue 0) top right,
+        radial-gradient(circle at bottom right, transparent 15px, aliceblue 0) bottom right,
+        radial-gradient(circle at bottom left, transparent 15px, aliceblue 0) bottom left;
+      background-size: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <div class="box corner1">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box corner2">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box corner4">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box arc-corner4">人生若只如初见，何事秋风悲画扇。</div>
+</body>
+</html>

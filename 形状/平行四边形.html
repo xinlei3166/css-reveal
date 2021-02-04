@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>平行四边形</title>
+  <style>
+    .button {
+      position: relative;
+      display: inline-block;
+      margin: 100px;
+      padding: 16px 20px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .button::before {
+      position: absolute;
+      content: ' ';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background: #409EFF;
+      transition: .3s;
+    }
+
+    .button-active::before {
+      transform: skewX(-30deg);
+    }
+  </style>
+</head>
+<body>
+  <a class="button" data-active="0">Click Me</a>
+
+  <script>
+    const btn = document.querySelector('.button')
+    btn.onclick = function () {
+      if (this.getAttribute('data-active') === '0') {
+        this.setAttribute('data-active', '1')
+        this.classList.add('button-active')
+      } else {
+        this.setAttribute('data-active', '0')
+        this.classList.remove('button-active')
+      }
+    }
+  </script>
+</body>
+</html>

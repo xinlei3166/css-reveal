@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>单侧投影</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 200px;
+      background: aliceblue;
+    }
+
+    .box-shadow1 {
+      box-shadow: 0 3px 3px -3px black;
+    }
+    .box-shadow2 {
+      box-shadow: 3px 3px 6px -3px black;
+    }
+    .box-shadow3 {
+      box-shadow: 5px 0 5px -5px black, -5px 0 5px -5px black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box-shadow1">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box box-shadow2">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box box-shadow3">人生若只如初见，何事秋风悲画扇。</div>
+</body>
+</html>
