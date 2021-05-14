@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自适应内部元素</title>
+  <style>
+    .box {
+      display: inline-block;
+    }
+
+    .img {
+      width: 300px;
+    }
+
+    figure {
+      max-width: 300px;
+      max-width: min-content;
+      margin: auto;
+    }
+
+    figure img {
+      max-width: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>去年春天，在这户人家里，我看见那美丽的脸庞和桃花互相衬托，显得分外红润。 今日再来此地，姑娘不知去向何处，只有桃花依旧，含笑怒放春风之中。</p>
+    <figure>
+      <img class="img" src="../static/img/cat.jpg" />
+      <figcaption>
+        天呀！我愿与你相爱，让我们的爱情永不衰绝。
+        除非高山变平地，滔滔江水干涸断流，凛凛寒冬雷阵阵，炎炎酷暑白雪纷飞，天地相交聚合连接，我才肯将对你的情意抛弃决绝！
+      </figcaption>
+    </figure>
+    <p>去年春天，在这户人家里，我看见那美丽的脸庞和桃花互相衬托，显得分外红润。
+      今日再来此地，姑娘不知去向何处，只有桃花依旧，含笑怒放春风之中。</p>
+  </div>
+</body>
+</html>

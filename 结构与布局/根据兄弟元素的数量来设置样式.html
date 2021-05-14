@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>根据兄弟元素的数量来设置样式</title>
+  <style>
+    .box {
+      list-style: none;
+    }
+    .item {
+      display: inline-block;
+      margin: 5px;
+      padding: 20px 32px;
+      font-size: 20px;
+      background: aliceblue;
+    }
+    .item:first-child:nth-last-child(n+4),
+    .item:first-child:nth-last-child(n+4) ~ .item{
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+    .box3 .item:first-child:nth-last-child(-n+4),
+    .box3 .item:first-child:nth-last-child(-n+4) ~ .item{
+      padding: 10px 16px;
+      font-size: 14px;
+      background: pink;
+    }
+  </style>
+</head>
+<body>
+  <ul class="box">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+  </ul>
+  <ul class="box">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+  </ul>
+  <ul class="box3">
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+  </ul>
+</body>
+</html>

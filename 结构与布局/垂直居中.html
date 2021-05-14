@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>垂直居中</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 200px;
+      background: aliceblue;
+    }
+
+    .position {
+      position: relative;
+    }
+    .position span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .viewport {
+      margin: 50vh auto 0;
+      transform: translateY(-50%);
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="box position">
+    <span>人生若只如初见，何事秋风悲画扇。</span>
+  </div>
+  <div class="box viewport">
+    <span>人生若只如初见，何事秋风悲画扇。</span>
+  </div>
+  <div class="box flex">
+    <span>人生若只如初见，何事秋风悲画扇。</span>
+  </div>
+</body>
+</html>

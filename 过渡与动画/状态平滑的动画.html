@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>状态平滑的动画</title>
+  <style>
+    @keyframes panoramic {
+      to {
+        background-position: 100% 0;}
+    }
+    .box {
+      width: 400px;
+      height: 400px;
+      background: url('fj.jpeg');
+      background-size: auto 100%;
+      animation: panoramic 10s linear infinite alternate;
+      animation-play-state: paused;
+    }
+    .box:hover, .box:focus {
+      animation-play-state: running;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>交互式的图片对比组件</title>
+  <style>
+    .image-slider, .image-slider-js {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-slider div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      max-width: 100%;
+      overflow: hidden;
+      resize: horizontal;
+    }
+
+    .image-slider div::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 12px;
+      height: 12px;
+      padding: 5px;
+      background: linear-gradient(-45deg, white 50%, transparent 0);
+      background-clip: content-box;
+      cursor: ew-resize;
+    }
+
+    .image-slider img, .image-slider-js img {
+      display: block;
+      user-select: none;
+    }
+
+    .image-slider .before, .image-slider-js .before {
+      filter: grayscale(100%);
+    }
+
+    .image-slider-js div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .image-slider-js input {
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 100%;
+      margin: 0;
+      /*filter: contrast(.5);*/
+      /*mix-blend-mode: luminosity;*/
+      /*width: 50%;*/
+      /*transform: scale(2);*/
+      /*transform-origin: left bottom;*/
+    }
+  </style>
+</head>
+<body>
+  <div class="image-slider">
+    <div>
+      <img class="before" src="../static/img/cat.jpg" alt="before" />
+    </div>
+    <img class="after" src="../static/img/cat.jpg" alt="before" />
+  </div>
+  <div class="image-slider-js">
+    <div>
+      <img class="before" src="../static/img/cat.jpg" alt="before" />
+    </div>
+    <img class="after" src="../static/img/cat.jpg" alt="before" />
+    <input type="range" />
+  </div>
+<script>
+  const div = document.querySelector('.image-slider-js div')
+  const range = document.querySelector('input')
+  range.oninput = function() {
+    div.style.width = this.value + '%'
+  }
+</script>
+</body>
+</html>

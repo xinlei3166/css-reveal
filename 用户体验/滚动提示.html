@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>滚动提示</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin: 20px;
+      padding: .3em .5em;
+      width: 200px;
+      height: 300px;
+      border: 1px solid silver;
+      overflow: auto;
+      background: linear-gradient(white 30%, transparent),
+      radial-gradient(at 50% 0, rgba(0,0,0,.2), transparent 70%),
+      linear-gradient(to top, white 15px, hsla(0,0%,100%,0)) bottom / 100% 50px,
+      radial-gradient(at bottom, rgba(0,0,0,.2), transparent 70%) bottom / 100% 15px;
+      background-repeat: no-repeat;
+      background-size: 100% 50px, 100% 15px;
+      background-attachment: local, scroll, local, scroll;
+    }
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<ul class="box">
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+  <li>人生若只如初见，何事秋风悲画扇。</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>沿环形路径平移的动画</title>
+  <style>
+    /* box1 */
+    .box1 {
+      width: 300px;
+      height: 300px;
+      padding: 20px;
+      border-radius: 50%;
+      background: #fb3;
+      margin: 100px auto;
+    }
+
+    .box1 .avatar {
+      width: 50px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .box1 .avatar img {
+      display: block;
+      width: inherit;
+    }
+
+    /* animation */
+    @keyframes spin1 {
+      to { transform: rotate(1turn)}
+    }
+    .box1 .avatar {
+      animation: spin1 3s infinite linear;
+      transform-origin: 50% 150px;
+    }
+    .box1 .avatar img {
+      animation: inherit;
+      animation-direction: reverse;
+    }
+
+    /* box2 */
+    .box2{
+      width: 300px;
+      height: 300px;
+      padding: 20px;
+      margin: 100px auto;
+      border-radius: 50%;
+      background: #fb3;
+    }
+
+    .box2 .avatar {
+      display: block;
+      width: 50px;
+      margin: calc(50% - 25px) auto 0;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    /* animation */
+    @keyframes spin2 {
+      from { transform: rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn)}
+      to { transform: rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn)}
+    }
+    .box2 .avatar {
+      animation: spin2 3s infinite linear;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="avatar">
+      <img src="adamcatlace.jpeg">
+    </div>
+  </div>
+  <div class="box2">
+    <img class="avatar" src="adamcatlace.jpeg">
+  </div>
+</body>
+</html>

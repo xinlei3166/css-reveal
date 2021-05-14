@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>通过阴影来弱化背景</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      width: 200px;
+      height: 200px;
+      background: aliceblue;
+      border: 1px solid;
+    }
+
+    .overlay {
+      filter: blur(3px) contrast(.8) brightness(.8);
+    }
+  </style>
+</head>
+<body>
+  <main class="overlay">人生若只如初见，何事秋风悲画扇。</main>
+  <dialog class="box">人生若只如初见，何事秋风悲画扇。</dialog>
+</body>
+</html>

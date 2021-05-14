@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>闪烁效果</title>
+  <style>
+    .box {
+      display: inline-block;
+      margin-right: 50px;
+      margin-bottom: 50px;
+      padding: 20px;
+      background: aliceblue;
+    }
+
+    @keyframes blink1 {
+      50% { color: transparent }
+    }
+    @keyframes blink2 {
+      to { color: transparent }
+    }
+    .blink1 {
+      animation: 1s blink1 3;
+    }
+    .blink2 {
+      animation: .5s blink2 6;
+      animation-direction: alternate;
+    }
+    .blink3 {
+      animation: 1s blink1 3 steps(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="box blink1">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box blink2">人生若只如初见，何事秋风悲画扇。</div>
+  <div class="box blink3">人生若只如初见，何事秋风悲画扇。</div>
+</body>
+</html>

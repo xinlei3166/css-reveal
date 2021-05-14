@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>精确控制表格列宽</title>
+  <style>
+    .box {
+      width: 800px;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-top: 1px solid #cccccc;
+      border-left: 1px solid #cccccc;
+      border-collapse: collapse;
+    }
+
+    th {
+      padding: 16px;
+      border-bottom: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      overflow-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <table>
+    <colgroup>
+      <col style="width: 200px">
+      <col>
+    </colgroup>
+    <tr>
+      <th class="th">列1</th>
+      <th class="th">列2</th>
+      <th class="th">列3</th>
+    </tr>
+    <tr>
+      <td class="td">人生若只如初见，何事秋风悲画扇。</td>
+      <td class="td">去年春天，在这户人家里，我看见那美丽的脸庞和桃花互相衬托，显得分外红润。 今日再来此地，姑娘不知去向何处，只有桃花依旧，含笑怒放春风之中。</td>
+      <td class="td">天呀！我愿与你相爱，让我们的爱情永不衰绝。
+        除非高山变平地，滔滔江水干涸断流，凛凛寒冬雷阵阵，炎炎酷暑白雪纷飞，天地相交聚合连接，我才肯将对你的情意抛弃决绝！</td>
+    </tr>
+    <tr>
+      <td class="td">人生若只如初见，何事秋风悲画扇。</td>
+      <td class="td">去年春天，在这户人家里，我看见那美丽的脸庞和桃花互相衬托，显得分外红润。 今日再来此地，姑娘不知去向何处，只有桃花依旧，含笑怒放春风之中。</td>
+      <td class="td">天呀！我愿与你相爱，让我们的爱情永不衰绝。
+        除非高山变平地，滔滔江水干涸断流，凛凛寒冬雷阵阵，炎炎酷暑白雪纷飞，天地相交聚合连接，我才肯将对你的情意抛弃决绝！</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
